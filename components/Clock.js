@@ -44,6 +44,15 @@ const Clock = ({ size }) => {
                         strokeWidth="1"
                         transform={`rotate(${minsDegrees} 25 25)`}
                     />
+                    <Line
+                        x1="25"
+                        y1={start}
+                        x2="25"
+                        y2="10"
+                        stroke="black"
+                        strokeWidth="0.5"
+                        transform={`rotate(${secondsDegrees} 25 25)`}
+                    />
                     <Circle
                         cx="25.5"
                         cy={start}

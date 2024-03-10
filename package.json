@@ -19,7 +19,8 @@
     "react-native-sound": "^0.11.2",
     "react-native-svg": "^15.1.0",
     "react-native-web": "~0.19.6",
-    "expo-av": "~13.10.5"
+    "expo-av": "~13.10.5",
+    "expo-blur": "~12.9.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
