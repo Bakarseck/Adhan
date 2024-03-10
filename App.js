@@ -75,7 +75,7 @@ const heuresDePrieres = {
 
 const App = () => {
 
-  const [backgroundIndex, setBackgroundIndex] = useState(12);
+  const [backgroundIndex, setBackgroundIndex] = useState(11);
   const [showDropdown, setShowDropdown] = useState(false);
   const [currentSound, setCurrentSound] = useState(null);
   const [prochainePriere, setProchainePriere] = useState({ nom: '', heure: '' });
@@ -101,8 +101,6 @@ const App = () => {
         if (heure === heureActuelle) {
           console.log(`Il est temps pour la prière de ${nom}`);
           playSound(adhans[1].file);
-        } else {
-          console.log(`Il reste avant, ${nom}`);
         }
       });
     };
