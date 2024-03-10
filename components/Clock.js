@@ -19,37 +19,39 @@ const Clock = ({ size }) => {
     const hourDegrees = (date.getHours() / 12) * 360 + (date.getMinutes() / 60) * 30;
 
     return (
-        <View style={styles.clockFace}>
-            <Image
-                source={require('../assets/clock.png')}
-                style={{ width: size, height: size }}
-            />
-            <Svg height={size} width={size} viewBox="0 0 50 50" style={styles.hands}>
-                <Line
-                    x1={start}
-                    y1={start}
-                    x2="25"
-                    y2="17"
-                    stroke="black"
-                    strokeWidth="1.5"
-                    transform={`rotate(${hourDegrees} 25 25)`}
+        <View style={styles.horloges}>
+            <View style={styles.clockFace}>
+                <Image
+                    source={require('../assets/clock.png')}
+                    style={{ width: size, height: size }}
                 />
-                <Line
-                    x1={start}
-                    y1={start}
-                    x2="25"
-                    y2="12"
-                    stroke="black"
-                    strokeWidth="1"
-                    transform={`rotate(${minsDegrees} 25 25)`}
-                />
-                <Circle
-                    cx={start}
-                    cy={start}
-                    r="1.5"
-                    fill="black"
-                />
-            </Svg>
+                <Svg height={size} width={size} viewBox="0 0 50 50" style={styles.hands}>
+                    <Line
+                        x1="25.5"
+                        y1={start}
+                        x2="25"
+                        y2="17"
+                        stroke="black"
+                        strokeWidth="1.5"
+                        transform={`rotate(${hourDegrees} 25 25)`}
+                    />
+                    <Line
+                        x1={start}
+                        y1={start}
+                        x2="25"
+                        y2="12"
+                        stroke="black"
+                        strokeWidth="1"
+                        transform={`rotate(${minsDegrees} 25 25)`}
+                    />
+                    <Circle
+                        cx="25.5"
+                        cy={start}
+                        r="1.5"
+                        fill="black"
+                    />
+                </Svg>
+            </View>
         </View>
     );
 };
@@ -65,6 +67,10 @@ const styles = StyleSheet.create({
         top: 0,
         left: 0,
     },
+    horloges: {
+        position: 'absolute',
+        top: 170,
+    }
 });
 
 export default Clock;
